@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".databindingtest.DataBindingTestActivity">
+    <data>
+        <variable name="user" type="com.example.testapp.databindingtest.model.User"/>
+        <variable name="handler" type="com.example.testapp.databindingtest.contract.OnChangeClickListener"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear_layout_databinding_container"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{user.name}"
+                android:layout_margin="8dp"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:gravity="center"/>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_change"
+                android:layout_margin="8dp"
+                android:text="Change"
+                android:onClick="@{handler::onChangeClick}"/>
+    </LinearLayout>
+</layout>
