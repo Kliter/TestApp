@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="enumResult" type="com.example.testapp.enumtest.EnumResult"/>
+        <variable name="handler" type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClick}"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/white"
+                android:text="A"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClick}"
+                android:layout_below="@id/btn_a"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/white"
+                android:text="B"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClick}"
+                android:layout_below="@id/btn_b"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/white"
+                android:text="C"/>
+
+        <TextView
+                android:id="@+id/tv_enum_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_c"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:gravity="center_horizontal"
+                android:text="@{enumResult.enumName}"/>
+
+    </RelativeLayout>
+</layout>

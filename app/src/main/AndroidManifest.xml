@@ -10,6 +10,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".enumtest.EnumActivity">
+        </activity>
         <activity android:name=".retrofittest.ui.RetrofitActivity">
         </activity>
         <activity android:name=".kointest.view.KoinActivity">
