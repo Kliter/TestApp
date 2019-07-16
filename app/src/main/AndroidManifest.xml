@@ -12,6 +12,8 @@
             android:theme="@style/AppTheme">
         <activity android:name=".enumtest.EnumActivity">
         </activity>
+        <activity android:name=".githubbrowsersampleclone.GithubBrowserSampleCloneActivity">
+        </activity>
         <activity android:name=".retrofittest.ui.RetrofitActivity">
         </activity>
         <activity android:name=".kointest.view.KoinActivity">
