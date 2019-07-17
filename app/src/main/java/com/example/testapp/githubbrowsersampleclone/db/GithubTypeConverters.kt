@@ -7,7 +7,7 @@ import java.lang.NumberFormatException
 object GithubTypeConverters {
     @TypeConverter
     @JvmStatic
-    fun stringtoIntList(data: String?): List<Int>? {
+    fun stringtoIntList(data: String?): List<Int>? {// StringをList<Int>に変換する関数。
         return data?.let {
             it.split(",").map {
                 try {
@@ -23,7 +23,7 @@ object GithubTypeConverters {
 
     @TypeConverter
     @JvmStatic
-    fun intListToString(ints: List<Int>?): String? {
+    fun intListToString(ints: List<Int>?): String? {// List<Int>をStringに変換する関数。
         return ints?.joinToString (",")
     }
 }

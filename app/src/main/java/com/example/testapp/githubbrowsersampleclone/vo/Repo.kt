@@ -6,13 +6,16 @@ import androidx.room.Index
 import com.google.gson.annotations.SerializedName
 
 /**
- * Using name/owner_login as primaary key instead of id since name/owner_login is always available vs id is not.
+ * Using name/owner_login as primary key instead of id since name/owner_login is always available vs id is not.
  */
 @Entity(
-    indices = [
-    Index("id")]
+    indices = [// クエリを高速化するために、指定したフィールドにインデックスをつけることができる。
+        Index("id"),
+        Index("owner_login")
+    ],
+    primaryKeys = ["name", "owner_login"]
 )
-class Repo (
+class Repo(// デフォルトでは、Roomはクラス名をデータベーステーブル名として使用する。(Repoテーブルが存在するということ。)
     val id: Int,
     @field:SerializedName("name")
     val name: String,

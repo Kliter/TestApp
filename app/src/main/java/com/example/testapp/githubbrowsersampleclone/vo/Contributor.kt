@@ -15,7 +15,8 @@ import com.google.gson.annotations.SerializedName
     )]
 )
 data class Contributor(
-    @field: SerializedName("login")
+    // "@field"の意味が謎
+    @field:SerializedName("login")
     val login: String,
     @field:SerializedName("contributions")
     val contributions: Int,

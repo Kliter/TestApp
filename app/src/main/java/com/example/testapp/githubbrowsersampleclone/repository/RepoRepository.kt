@@ -51,6 +51,26 @@ class RepoRepository @Inject constructor(
         }.asLiveData()
     }
 
+    fun loadRepo(owner: String, name: String): LiveData<Resource<Repo>> {
+        return object: NetworkBoundResource<Repo, Repo>(appExecutors) {
+            override fun saveCallResult(item: Repo) {
+                repoDao.insert(item)
+            }
+
+            override fun shouldFetch(data: Repo?): Boolean = data == null
+
+            override fun loadFromDb(): LiveData<Repo> = repoDao.load(
+                ownerLogin = owner,
+                name = name
+            )
+
+            override fun createCall(): LiveData<ApiResponse<Repo>> = githubService.getRepo(
+                owner = owner,
+                name = name
+            )
+        }.asLiveData()
+    }
+
     fun loadContributors(owner: String, name: String): LiveData<Resource<List<Contributor>>> {
         return object: NetworkBoundResource<List<Contributor>, List<Contributor>>(appExecutors) {
             override fun saveCallResult(item: List<Contributor>) {

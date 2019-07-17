@@ -3,6 +3,7 @@ package com.example.testapp.githubbrowsersampleclone.ui.user
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import androidx.lifecycle.ViewModel
 import com.example.testapp.githubbrowsersampleclone.repository.RepoRepository
 import com.example.testapp.githubbrowsersampleclone.repository.UserRepository
 import com.example.testapp.githubbrowsersampleclone.util.AbsentLiveData
@@ -12,28 +13,23 @@ import com.example.testapp.githubbrowsersampleclone.vo.User
 import javax.inject.Inject
 
 class UserViewModel
-@Inject
-constructor(userRepository: UserRepository, repoRepository: RepoRepository) {
+@Inject constructor(userRepository: UserRepository, repoRepository: RepoRepository) : ViewModel() {
     private val _login = MutableLiveData<String>()
     val login: LiveData<String>
         get() = _login
-
     val repositories: LiveData<Resource<List<Repo>>> = Transformations
         .switchMap(_login) { login ->
             if (login == null) {
                 AbsentLiveData.create()
-            }
-            else {
+            } else {
                 repoRepository.loadRepos(login)
             }
         }
-
     val user: LiveData<Resource<User>> = Transformations
         .switchMap(_login) { login ->
             if (login == null) {
                 AbsentLiveData.create()
-            }
-            else {
+            } else {
                 userRepository.loadUser(login)
             }
         }
@@ -49,5 +45,4 @@ constructor(userRepository: UserRepository, repoRepository: RepoRepository) {
             _login.value = it
         }
     }
-
 }

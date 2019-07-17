@@ -9,6 +9,7 @@ import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
 import com.example.testapp.kointest.view.KoinActivity
+import com.example.testapp.livedata.LiveDataActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_koin_test -> {
                 intent.setClass(this, KoinActivity::class.java)
+            }
+            R.id.btn_live_data_test -> {
+                intent.setClass(this, LiveDataActivity::class.java)
             }
         }
         startActivity(intent)

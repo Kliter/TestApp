@@ -5,7 +5,7 @@ import androidx.room.TypeConverters
 import com.example.testapp.githubbrowsersampleclone.db.GithubTypeConverters
 
 @Entity(primaryKeys = ["query"])
-@TypeConverters(GithubTypeConverters::class)
+@TypeConverters(GithubTypeConverters::class)// RoomはListを扱えないので、TypeConvertersを使用する。
 data class RepoSearchResult (
     val query: String,
     val repoIds: List<Int>,

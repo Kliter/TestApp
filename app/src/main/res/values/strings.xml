@@ -6,4 +6,5 @@
     <string name="cancel">Cancel</string>
     <string name="databinding_test">DataBinding Test</string>
     <string name="koin_test">Koin Test</string>
+    <string name="live_data_test">LiveData Test</string>
 </resources>

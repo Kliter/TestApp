@@ -36,7 +36,7 @@ class FetchNextSearchPageTask constructor(
             val apiResponse = ApiResponse.create(response)
             when (apiResponse) {
                 is ApiSuccessResponse -> {
-                    // we merge all repo ids into 1 list so that it is easier to fetch the
+                    // We merge all repo ids into 1 list so that it is easier to fetch the
                     // result list.
                     val ids = arrayListOf<Int>()
                     ids.addAll(current.repoIds)
