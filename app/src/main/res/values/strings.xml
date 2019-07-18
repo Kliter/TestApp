@@ -8,4 +8,5 @@
     <string name="koin_test">Koin Test</string>
     <string name="enum_test">Enum Test</string>
     <string name="live_data_test">LiveData Test</string>
+    <string name="epoxy_test">Epoxy Test</string>
 </resources>

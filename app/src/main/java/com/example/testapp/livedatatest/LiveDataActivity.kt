@@ -1,4 +1,4 @@
-package com.example.testapp.livedata
+package com.example.testapp.livedatatest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

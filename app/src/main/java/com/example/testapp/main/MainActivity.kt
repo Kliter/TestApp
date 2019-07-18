@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
+import com.example.testapp.epoxytest.EpoxyActivity
 import com.example.testapp.kointest.view.KoinActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,6 +29,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_koin_test -> {
                 intent.setClass(this, KoinActivity::class.java)
+            }
+            R.id.btn_live_data_test -> {
+                intent.setClass(this, KoinActivity::class.java)
+            }
+            R.id.btn_enum_test -> {
+                intent.setClass(this, KoinActivity::class.java)
+            }
+            R.id.btn_epoxy_test -> {
+                intent.setClass(this, EpoxyActivity::class.java)
             }
         }
         startActivity(intent)
