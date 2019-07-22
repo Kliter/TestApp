@@ -10,4 +10,5 @@
     <string name="live_data_test">LiveData Test</string>
     <string name="epoxy_test">Epoxy Test</string>
     <string name="retrofit_test">Retrofit Test</string>
+    <string name="databindingxlivedata_sample">DataBinding x LiveData Sample</string>
 </resources>

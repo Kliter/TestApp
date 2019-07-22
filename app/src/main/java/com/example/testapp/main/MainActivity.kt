@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
+import com.example.testapp.enumtest.DataBindingxLiveDataActivity
 import com.example.testapp.epoxytest.EpoxyActivity
 import com.example.testapp.kointest.view.KoinActivity
 import com.example.testapp.retrofittest.RetrofitActivity
@@ -42,6 +43,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_retrofit_test -> {
                 intent.setClass(this, RetrofitActivity::class.java)
+            }
+            R.id.btn_databindingxlivedata_sample -> {
+                intent.setClass(this, DataBindingxLiveDataActivity::class.java)
             }
         }
         startActivity(intent)
