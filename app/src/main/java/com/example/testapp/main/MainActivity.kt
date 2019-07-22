@@ -8,11 +8,10 @@ import androidx.databinding.DataBindingUtil
 import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
-import com.example.testapp.enumtest.DataBindingxLiveDataActivity
+import com.example.testapp.databindingxlivedatasample.DataBindingxLiveDataActivity
 import com.example.testapp.epoxytest.EpoxyActivity
 import com.example.testapp.kointest.view.KoinActivity
 import com.example.testapp.retrofittest.RetrofitActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

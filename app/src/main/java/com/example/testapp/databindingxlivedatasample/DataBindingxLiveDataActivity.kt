@@ -1,4 +1,4 @@
-package com.example.testapp.enumtest
+package com.example.testapp.databindingxlivedatasample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,15 +1,22 @@
 package com.example.testapp.retrofittest
 
-import androidx.databinding.BaseObservable
-import androidx.databinding.Bindable
-import com.example.testapp.BR
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-class RetrofitViewModel: BaseObservable() {
+class RetrofitViewModel: ViewModel() {
 
-    @get: Bindable
-    var result: String? = null
-        set(value) {
-            field = value
-            notifyPropertyChanged(BR.result)
+    companion object {
+        private const val TAG = "RetrofitViewModel"
+    }
+
+    var result: MutableLiveData<String> = MutableLiveData()
+
+    fun getItems() {
+        val itemRepository = ItemRepository()
+        itemRepository.getItemList { itemList ->
+            Log.d(TAG, "$itemList")
+            this.result.value = itemList.joinToString()
         }
+    }
 }
