@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.testapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:name=".main.Application"
             android:allowBackup="true"
@@ -10,13 +12,15 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".retrofittest.RetrofitActivity">
+        </activity>
+        <activity android:name=".daggertest.DaggerActivity">
+        </activity>
         <activity android:name=".epoxytest.EpoxyActivity">
         </activity>
         <activity android:name=".livedatatest.LiveDataActivity">
         </activity>
         <activity android:name=".enumtest.EnumActivity">
-        </activity>
-        <activity android:name=".retrofittest.ui.RetrofitActivity">
         </activity>
         <activity android:name=".kointest.view.KoinActivity">
         </activity>

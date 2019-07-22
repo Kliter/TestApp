@@ -10,6 +10,7 @@ import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
 import com.example.testapp.epoxytest.EpoxyActivity
 import com.example.testapp.kointest.view.KoinActivity
+import com.example.testapp.retrofittest.RetrofitActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -38,6 +39,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_epoxy_test -> {
                 intent.setClass(this, EpoxyActivity::class.java)
+            }
+            R.id.btn_retrofit_test -> {
+                intent.setClass(this, RetrofitActivity::class.java)
             }
         }
         startActivity(intent)

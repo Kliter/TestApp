@@ -71,6 +71,15 @@
                             android:text="@string/epoxy_test"
                             android:onClick="@{handler::onClick}"/>
 
+                    <Button
+                            android:id="@+id/btn_retrofit_test"
+                            style="Widget.TestApp.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:text="@string/retrofit_test"
+                            android:onClick="@{handler::onClick}"/>
+
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>
