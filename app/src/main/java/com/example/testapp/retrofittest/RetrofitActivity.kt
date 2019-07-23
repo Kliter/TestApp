@@ -17,8 +17,8 @@ class RetrofitActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityRetrofitBinding>(this, R.layout.activity_retrofit)
 
         val viewModel = RetrofitViewModel()
-        binding.lifecycleOwner = this
-        binding.retrofitViewmodel = viewModel
+        binding.lifecycleOwner = this // これがあることで、Activityがactiveな時にのみ更新されるようになる。
+        binding.retrofitViewmodel = viewModel // 監視の機能はViewModelが提供する。
         viewModel.getItems()
     }
 }

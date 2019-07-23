@@ -11,4 +11,8 @@
     <string name="epoxy_test">Epoxy Test</string>
     <string name="retrofit_test">Retrofit Test</string>
     <string name="databindingxlivedata_sample">DataBinding x LiveData Sample</string>
+    <string name="dagger_test">Dagger Test</string>
+    <string name="part1">Part1</string>
+    <string name="part2">Part2</string>
+    <string name="part3">Part3</string>
 </resources>

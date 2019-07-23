@@ -12,86 +12,89 @@
             android:layout_height="match_parent"
             tools:context=".main.MainActivity">
 
-        <RelativeLayout
+        <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <ScrollView
+            <LinearLayout
+                    android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                <LinearLayout
-                        android:id="@+id/linearLayout"
+                <Button
+                        android:id="@+id/btn_databinding_test"
+                        style="Widget.TestApp.Button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_margin="8dp"
+                        android:text="@string/databinding_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_databinding_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/databinding_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_koin_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/koin_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_koin_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/koin_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_enum_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/enum_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_enum_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/enum_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_live_data_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/live_data_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_live_data_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/live_data_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_epoxy_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/epoxy_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_epoxy_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/epoxy_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_retrofit_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/retrofit_test"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_retrofit_test"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/retrofit_test"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_databindingxlivedata_sample"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/databindingxlivedata_sample"
+                        android:onClick="@{handler::onClick}"/>
 
-                    <Button
-                            android:id="@+id/btn_databindingxlivedata_sample"
-                            style="Widget.TestApp.Button"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:text="@string/databindingxlivedata_sample"
-                            android:onClick="@{handler::onClick}"/>
+                <Button
+                        android:id="@+id/btn_dagger_test"
+                        style="Widget.TestApp.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/dagger_test"
+                        android:onClick="@{handler::onClick}"/>
 
-
-                </LinearLayout>
-            </ScrollView>
-        </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </layout>

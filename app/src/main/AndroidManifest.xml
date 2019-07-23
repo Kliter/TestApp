@@ -12,11 +12,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".daggertest.part3.DaggerPart3Activity">
+        </activity>
+        <activity android:name=".daggertest.part2.DaggerPart2Activity">
+        </activity>
+        <activity android:name=".daggertest.part1.view.DaggerPart1Activity">
+        </activity>
+        <activity android:name=".daggertest.DaggerActivity">
+        </activity>
         <activity android:name=".databindingxlivedatasample.DataBindingxLiveDataActivity">
         </activity>
         <activity android:name=".retrofittest.RetrofitActivity">
-        </activity>
-        <activity android:name=".daggertest.DaggerActivity">
         </activity>
         <activity android:name=".epoxytest.EpoxyActivity">
         </activity>

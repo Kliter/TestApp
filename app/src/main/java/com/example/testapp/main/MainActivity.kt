@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.example.testapp.R
+import com.example.testapp.daggertest.DaggerActivity
 import com.example.testapp.databinding.ActivityMainBinding
 import com.example.testapp.databindingtest.view.DataBindingActivity
 import com.example.testapp.databindingxlivedatasample.DataBindingxLiveDataActivity
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_databindingxlivedata_sample -> {
                 intent.setClass(this, DataBindingxLiveDataActivity::class.java)
+            }
+            R.id.btn_dagger_test -> {
+                intent.setClass(this, DaggerActivity::class.java)
             }
         }
         startActivity(intent)
