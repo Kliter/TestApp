@@ -3,11 +3,9 @@ package com.example.testapp.daggertest.part1.di
 import com.example.testapp.daggertest.common.IApiService
 import com.example.testapp.daggertest.common.IFugaService
 import com.example.testapp.daggertest.common.IHogeService
-import com.example.testapp.daggertest.part1.view.DaggerPart1Activity
+import com.example.testapp.daggertest.part1.ui.DaggerPart1Activity
 import dagger.Component
-import javax.inject.Singleton
 
-@Singleton
 @Component(
     modules = [
         ApiModule::class,

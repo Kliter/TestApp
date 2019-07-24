@@ -1,4 +1,4 @@
-package com.example.testapp.daggertest.part1.view
+package com.example.testapp.daggertest.part1.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

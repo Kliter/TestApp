@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.example.testapp.R
-import com.example.testapp.daggertest.part1.view.DaggerPart1Activity
-import com.example.testapp.daggertest.part2.DaggerPart2Activity
-import com.example.testapp.daggertest.part3.DaggerPart3Activity
+import com.example.testapp.daggertest.part1.ui.DaggerPart1Activity
+import com.example.testapp.daggertest.part2.view.DaggerPart2Activity
+import com.example.testapp.daggertest.part3.ui.DaggerPart3Activity
 import com.example.testapp.databinding.ActivityDaggerBinding
 
 // http://y-anz-m.blogspot.com/2017/07/android-dagger-1.html
