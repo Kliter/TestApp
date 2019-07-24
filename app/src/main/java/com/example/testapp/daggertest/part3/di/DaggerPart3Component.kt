@@ -21,13 +21,20 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules = [
-        AndroidInjectionModule::class
+        AndroidInjectionModule::class,
+        DaggerPart3Module::class
     ]
 )
 interface DaggerPart3Component {
 
     fun inject(application: Application)
 
+    /**
+     * Builder→Factoryの変化は、
+     * あくまでComponentの取得方法が
+     * builder().XXX(XXX).build()から、
+     * factory().create(XXX)に変わっただけ。
+     */
     @Component.Builder
     interface Builder {
         @BindsInstance

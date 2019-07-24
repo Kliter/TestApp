@@ -32,6 +32,7 @@ class DaggerPart3Activity : AppCompatActivity() {
          * ApplicationクラスでHasActivityInjectorが実装されていれば、
          * DispatchingAndroidInjectorを使って引数のActivityをComponent(別名ObjectGraph)に入れる。
          * Activityで@InjectしているフィールドにInjectしてくれる。
+         * Componentを取得する処理をActivityから消すっていう意識が大事！そのための処理。
          */
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
@@ -56,8 +57,5 @@ class DaggerPart3Activity : AppCompatActivity() {
          * ★この二つの問題を解決するために、Android用のライブラリが別途用意されている。
          * ※そもそもDaggerはAndroid専用に作られたライブラリではない。
          */
-
-
-
     }
 }
