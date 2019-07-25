@@ -1,4 +1,4 @@
-package com.example.testapp.retrofittest.di
+package com.example.testapp.retrofittest.di.module
 
 import com.example.testapp.retrofittest.ui.RetrofitActivity
 import dagger.Module

@@ -10,6 +10,7 @@ import com.example.testapp.daggertest.part1.ui.DaggerPart1Activity
 import com.example.testapp.daggertest.part2.view.DaggerPart2Activity
 import com.example.testapp.daggertest.part3.ui.DaggerPart3Activity
 import com.example.testapp.daggertest.part4.ui.DaggerPart4Activity
+import com.example.testapp.daggertest.part5.ui.DaggerPart5Activity
 import com.example.testapp.databinding.ActivityDaggerBinding
 
 // http://y-anz-m.blogspot.com/2017/07/android-dagger-1.html
@@ -40,6 +41,9 @@ class DaggerActivity : AppCompatActivity(),View.OnClickListener {
             }
             R.id.btn_dagger_part4 -> {
                 intent.setClass(this, DaggerPart4Activity::class.java)
+            }
+            R.id.btn_dagger_part5 -> {
+                intent.setClass(this, DaggerPart5Activity::class.java)
             }
         }
         startActivity(intent)

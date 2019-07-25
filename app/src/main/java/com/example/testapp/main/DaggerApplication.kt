@@ -2,7 +2,7 @@ package com.example.testapp.main
 
 import android.app.Activity
 import android.app.Application
-import com.example.testapp.retrofittest.di.DaggerRetrofitComponent
+import com.example.testapp.retrofittest.di.component.DaggerRetrofitComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -23,5 +23,11 @@ class DaggerApplication: Application(), HasActivityInjector {
         super.onCreate()
         val component = DaggerRetrofitComponent.factory().create(this)
         component.inject(this)
+
+        /**
+         * Componentは複数作れないので注意！！
+         */
+//        val daggerPart5Component = DaggerDaggerPart5Component.factory().create(this)
+//        daggerPart5Component.inject(this)
     }
 }

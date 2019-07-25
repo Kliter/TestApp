@@ -12,7 +12,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class ItemRepository {
+class ItemRepository: IItemRepository {
 
     companion object {
         private const val TAG = "ItemRepository"
@@ -31,7 +31,7 @@ class ItemRepository {
         itemService = retrofit.create(ItemService::class.java)              // itemServiceを通してAPI呼び出しできるようにする。
     }
 
-    fun getItemList(callback: (List<ItemEntity>) -> Unit) {
+    override fun getItemList(callback: (List<ItemEntity>) -> Unit) {
         itemService.items(page = 1, perPage = 10).enqueue(object: Callback<List<ItemEntity>> {
             override fun onFailure(call: Call<List<ItemEntity>>, t: Throwable) {
                 Log.e(TAG, "API call failed.")

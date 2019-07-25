@@ -4,8 +4,9 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testapp.retrofittest.repository.ItemRepository
+import javax.inject.Inject
 
-class RetrofitViewModel: ViewModel() {
+class RetrofitViewModel @Inject constructor(): ViewModel(), IRetrofitViewModel {
 
     companion object {
         private const val TAG = "RetrofitViewModel"
@@ -13,7 +14,7 @@ class RetrofitViewModel: ViewModel() {
 
     var result: MutableLiveData<String> = MutableLiveData()
 
-    fun getItems() {
+    override fun getItems() {
         val itemRepository = ItemRepository()
         itemRepository.getItemList { itemList ->
             Log.d(TAG, "$itemList")
