@@ -22,9 +22,7 @@ class DaggerPart4Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger_part4)
 
-        if (repository != null) {
-            Log.d(TAG, "Repository Name: ${repository}")
-            Log.d(TAG, "Injection Succeed!! Congratulations!!")
-        }
+        Log.d(TAG, "Repository Name: ${repository}")
+        Log.d(TAG, "Injection Succeed!! Congratulations!!")
     }
 }

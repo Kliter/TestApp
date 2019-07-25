@@ -3,10 +3,10 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".retrofittest.RetrofitActivity">
+        tools:context=".retrofittest.ui.RetrofitActivity">
 
     <data>
-        <variable name="retrofit_viewmodel" type="com.example.testapp.retrofittest.RetrofitViewModel"/>
+        <variable name="retrofit_viewmodel" type="com.example.testapp.retrofittest.viewmodel.RetrofitViewModel"/>
     </data>
 
     <RelativeLayout

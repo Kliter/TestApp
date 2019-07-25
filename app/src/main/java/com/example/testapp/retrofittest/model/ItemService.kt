@@ -1,4 +1,4 @@
-package com.example.testapp.retrofittest
+package com.example.testapp.retrofittest.model
 
 import retrofit2.Call
 import retrofit2.http.GET

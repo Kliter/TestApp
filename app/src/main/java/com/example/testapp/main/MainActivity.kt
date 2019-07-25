@@ -12,7 +12,7 @@ import com.example.testapp.databindingtest.view.DataBindingActivity
 import com.example.testapp.databindingxlivedatasample.DataBindingxLiveDataActivity
 import com.example.testapp.epoxytest.EpoxyActivity
 import com.example.testapp.kointest.view.KoinActivity
-import com.example.testapp.retrofittest.RetrofitActivity
+import com.example.testapp.retrofittest.ui.RetrofitActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

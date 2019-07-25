@@ -1,8 +1,9 @@
-package com.example.testapp.retrofittest
+package com.example.testapp.retrofittest.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.testapp.retrofittest.repository.ItemRepository
 
 class RetrofitViewModel: ViewModel() {
 

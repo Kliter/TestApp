@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-            android:name=".daggertest.part4.di.DaggerPart4Application"
+            android:name=".main.DaggerApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".databindingxlivedatasample.DataBindingxLiveDataActivity">
         </activity>
-        <activity android:name=".retrofittest.RetrofitActivity">
+        <activity android:name=".retrofittest.ui.RetrofitActivity">
         </activity>
         <activity android:name=".epoxytest.EpoxyActivity">
         </activity>

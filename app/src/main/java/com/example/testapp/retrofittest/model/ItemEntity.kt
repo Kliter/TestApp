@@ -1,4 +1,4 @@
-package com.example.testapp.retrofittest
+package com.example.testapp.retrofittest.model
 
 import com.squareup.moshi.Json
 

@@ -1,6 +1,8 @@
-package com.example.testapp.retrofittest
+package com.example.testapp.retrofittest.repository
 
 import android.util.Log
+import com.example.testapp.retrofittest.model.ItemEntity
+import com.example.testapp.retrofittest.model.ItemService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
