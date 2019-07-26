@@ -17,19 +17,18 @@ class RetrofitActivity : AppCompatActivity() {
         private const val TAG = "RetrofitActivity"
     }
 
-//    @Inject
-//    lateinit var viewModelFactory: ViewModelFactory
     @Inject
-    lateinit var viewModel: RetrofitViewModel
+    lateinit var mViewModelFactory: ViewModelFactory
+    private lateinit var mViewModel: RetrofitViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityRetrofitBinding>(this, R.layout.activity_retrofit)
-//        viewModel = ViewModelProviders.of(this, viewModelFactory).get(RetrofitViewModel::class.java)
+        mViewModel = ViewModelProviders.of(this, mViewModelFactory).get(RetrofitViewModel::class.java)
 
         binding.lifecycleOwner = this // これがあることで、Activityがactiveな時にのみ更新されるようになる。
-        binding.retrofitViewmodel = viewModel // 監視の機能はViewModelが提供する。
-        viewModel.getItems()
+        binding.retrofitViewmodel = mViewModel // 監視の機能はViewModelが提供する。
+        mViewModel.getItems()
     }
 }

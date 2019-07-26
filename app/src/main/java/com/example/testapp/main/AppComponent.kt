@@ -1,6 +1,5 @@
-package com.example.testapp.retrofittest.di.component
+package com.example.testapp.main
 
-import com.example.testapp.main.DaggerApplication
 import com.example.testapp.retrofittest.di.module.RetrofitActivityModule
 import com.example.testapp.retrofittest.di.module.ViewModelModule
 import dagger.BindsInstance
@@ -15,7 +14,7 @@ import dagger.android.AndroidInjector
         ViewModelModule::class
     ]
 )
-interface RetrofitComponent: AndroidInjector<DaggerApplication> {
+interface AppComponent: AndroidInjector<DaggerApplication> {
 
     override fun inject(app: DaggerApplication)
 
@@ -24,6 +23,6 @@ interface RetrofitComponent: AndroidInjector<DaggerApplication> {
         fun create(
             @BindsInstance
             app: DaggerApplication
-        ): RetrofitComponent
+        ): AppComponent
     }
 }

@@ -2,7 +2,6 @@ package com.example.testapp.main
 
 import android.app.Activity
 import android.app.Application
-import com.example.testapp.retrofittest.di.component.DaggerRetrofitComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -21,7 +20,7 @@ class DaggerApplication: Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        val component = DaggerRetrofitComponent.factory().create(this)
+        val component = DaggerAppComponent.factory().create(this)
         component.inject(this)
 
         /**

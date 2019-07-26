@@ -10,11 +10,11 @@ import dagger.multibindings.IntoMap
 @Module
 abstract class ViewModelModule {
 
-//    @Binds
-//    @IntoMap
-//    @ViewModelKey(RetrofitViewModel::class)
-//    internal abstract fun provideRetrofitViewModel(retrofitViewModel: RetrofitViewModel): ViewModel
-
     @Binds
+    @IntoMap
+    @ViewModelKey(RetrofitViewModel::class)
     internal abstract fun provideRetrofitViewModel(retrofitViewModel: RetrofitViewModel): ViewModel
+
+//    @Binds
+//    internal abstract fun provideRetrofitViewModel(retrofitViewModel: RetrofitViewModel): ViewModel
 }
